@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+<div class="mb-3">
+    <table class="table table-striped">
+        <thead>
+            <th>Stock</th>
+            <th>Shares</th>
+            <th>Amount</th>
+            <th>Date&Time</th>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.stock }}</td>
+                <td>{{ transaction.shares }}</td>
+                <td>{{ transaction.amount }}</td>
+                <td>{{ transaction.timestamp }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
