@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Owned Stocks
+{% endblock %}
+
+{% block main %}
+<div class="mb-3">
+    <table class="table table-striped">
+        <thead>
+            <th>Stock</th>
+            <th>Shares</th>
+            <th>Price per Share</th>
+            <th>Buy Price</th>
+            <th>Current Price of Shares</th>
+        </thead>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock.stock }}</td>
+            <td>{{ stock.shares}}</td>
+            <td>{{ stock.price_per_share }}</td>
+            <td>{{ stock.price_at_buy }}</td>
+            <td>{{ stock.current_price}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="4"></td>
+            <td><strong>Total Stock Value:</strong> {{ totalInvested }}</td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+            <td><strong>Cash Remaining:</strong> {{ cash }}</td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+            <td><h5>Net Worth: {{ portfolioTotal }}</h5></td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
