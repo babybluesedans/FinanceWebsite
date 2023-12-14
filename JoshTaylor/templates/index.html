@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Josh-taylor.dev
+{% endblock %}
+{% block main %}
+    <div class="container-lg">
+        {% for blog in blog_entries %}
+            <div class="blog">
+                <div>
+                    <h3 class="blog-title">{{ blog.title }}</h3>
+                    <span class="blog-date">{{ blog.date }}</span>
+                </div>
+                <div class="blog-content">
+                    {{ blog.content }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

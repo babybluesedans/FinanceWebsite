@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Create Blog
+{% endblock %}
+{% block main %}
+<div class="blog-post">
+    <form class="blog-submit" method="POST" action="/create">
+        <input class="s-blog-title" id="title" name="title">
+        <textarea class="s-blog-content" id="content" name="content"></textarea>
+        <button class="btn btn-dark">Submit Post</button>
+    </form> 
+</div>
+{% endblock %}

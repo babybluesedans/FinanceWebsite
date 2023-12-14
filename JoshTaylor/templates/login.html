@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+{% block main %}
+<div class="mb-3 login-container">
+    <form action="/login" method="POST" class="login">
+        <input class="form-control mx-auto w-auto login-input" type="text" id="username" name="username" autofocus autocomplete="off" placeholder="Username" required>
+        <input class="form-control mx-auto w-auto login-input" type="password" id="password" name="password" autofocus autocomplete="off" placeholder="Password" required>
+        <button type="submit" class="btn btn-dark submit-button">Log In</button>
+    </form>
+</div>
+{% endblock %}
